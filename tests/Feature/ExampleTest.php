@@ -16,4 +16,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_the_home_page_contains_cake_php()
+    {
+        $response = $this->get('');
+        $response->assertSee('Cake PHP');
+        $response->assertStatus(200);
+    }
 }

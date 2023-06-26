@@ -15,3 +15,8 @@ Laravel Offical : https://laravel.com/docs/10.x/testing
 * How to use PEST for testing
 * TDD approach\
   ... and more.
+
+```php
+//Artisan command to run test.
+php artisan test
+```
