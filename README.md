@@ -45,7 +45,8 @@ php artisan make:test ProductTest
   Unit Vs Automated Testing.
   https://softwareengineering.stackexchange.com/questions/404319/unit-tests-vs-automation-testing
 
-  ![git-screen](https://github.com/DiveshR/Basic-Testing-PHPUnit-Pest-TDD/881ac8e6-f7a1-4745-99ba-c471ebefb0ab.jpeg)
+  ![881ac8e6-f7a1-4745-99ba-c471ebefb0ab](https://github.com/DiveshR/Basic-Testing-PHPUnit-Pest-TDD/assets/25860707/670f38a1-edf3-4745-a872-9f9cae009647)
+
 
   
 
