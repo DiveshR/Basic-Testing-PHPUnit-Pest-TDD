@@ -9,6 +9,10 @@ use Tests\TestCase;
 
 class ProductTest extends TestCase
 {
+    use RefreshDatabase; //Use it carefully if you uses main database it will delete your all data,for that unable         
+//    In phpunit.xml
+    // <env name="DB_CONNECTION" value="sqlite"/>
+    // <env name="DB_DATABASE" value=":memory:"/>
     public function test_product_page_contains_empty_products(): void
     {
         $response = $this->get('/products');
@@ -19,7 +23,7 @@ class ProductTest extends TestCase
 
     public function test_product_page_has_atleast_one_product(): void
     {
-        Product::create([
+        $product = Product::create([
             'name' => 'Test Product',
             'price' => 1121,    
         ]);
@@ -27,5 +31,9 @@ class ProductTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertDontSee('No Product Found..');
+        $response->assertSee('Test Product');
+        $response->assertViewHas('products', function($collection) use ($product){
+            return $collection->contains($product);
+        });
     }
 }
