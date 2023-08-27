@@ -35,7 +35,7 @@ php artisan make:test ProductTest
 * Now it uses Sqlite connection and memory db.
 * Use Following traits in test file for database migration.
 * use Illuminate\Foundation\Testing\RefreshDatabase;
-* NOTE : Use it carefully if you uses it in your main database it will delete your all  your data.
+* NOTE : Use it carefully if you uses it in your main database all data will be deleted.
 
 * Other way create a new file name it .env.testing and copy and paste .env file data in it.
  Modify:
