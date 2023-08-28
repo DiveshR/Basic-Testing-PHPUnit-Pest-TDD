@@ -15,13 +15,15 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Price</th>
+            <th>Price in INR</th>
+            <th>Price in USD</th>
         </tr>
         @forelse($products as $product)
         <tr>
             <td>{{ $product->id}}</td>
             <td>{{ $product->name}}</td>
-            <td>{{ $product->price}}</td>
+            <td>{{ number_format($product->price,2)}}</td>
+            <td>{{ $product->price_usd}}</td>
         </tr>
         @empty
         <tr>
