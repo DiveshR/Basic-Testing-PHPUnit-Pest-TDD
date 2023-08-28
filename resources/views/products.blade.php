@@ -30,6 +30,7 @@
             No Product Found..
         </tr>
         @endforelse
+        {{ $products->links() }}
     </table>
 </body>
 
