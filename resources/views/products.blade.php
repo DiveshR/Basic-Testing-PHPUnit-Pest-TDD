@@ -10,7 +10,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     @if(auth()->user()->is_admin)
-                    <button>Create New Product</button>
+                    <a href="{{route('products.create')}}">Create New Product</a>
                     @endif
                     <table class="hover:table-fixed">
                         <thead>
